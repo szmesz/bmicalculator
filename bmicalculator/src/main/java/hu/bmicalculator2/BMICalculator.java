@@ -4,11 +4,11 @@ public class BMICalculator {
 
 	public float calculateBMIIndex(UserAttributes userAttributes) {
 		float BMIIndex = (float) (userAttributes.getWeight() / (Math.pow(userAttributes.getHeight(), 2)));
+
 		return BMIIndex;
 	}
 
 	public String getBMICategory(float BMIIndex) {
-
 		String[] myStringArray = new String[] { "Severe Thinness", "Moderate Thinness", "Mild Thinness", "Normal",
 				"Overweight", "Obese Class I", "Obese CLass II", "Obese Class III" };
 		String BMICategory = "";
@@ -30,7 +30,7 @@ public class BMICalculator {
 		} else if (BMIIndex > 40) {
 			BMICategory = myStringArray[7];
 		}
+		
 		return BMICategory;
-
 	}
 }
